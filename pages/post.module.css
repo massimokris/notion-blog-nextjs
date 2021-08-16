@@ -1,12 +1,16 @@
 .container {
   padding: 0 20px;
-  max-width: 700px;
+  max-width: calc(600px + 10%);
   margin: 0 auto;
   line-height: 1.5;
 }
 
 .container h1 {
   font-size: 32px;
+}
+
+.container p, .container li{
+  color: rgb(61, 61, 61);
 }
 
 .name {

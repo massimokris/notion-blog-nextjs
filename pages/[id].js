@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index.js";
+import Header from '../components/header';
 import styles from "./post.module.css";
 
 export const Text = ({ text }) => {
@@ -102,10 +102,7 @@ export default function Post({ page, blocks }) {
   }
   return (
     <div>
-      <Head>
-        <title>{page.properties.Name.title[0].plain_text}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header />
 
       <article className={styles.container}>
         <h1 className={styles.name}>
@@ -116,7 +113,7 @@ export default function Post({ page, blocks }) {
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}
           <Link href="/">
-            <a className={styles.back}>← Go home</a>
+            <a className={styles.back}>← Volver al home</a>
           </Link>
         </section>
       </article>

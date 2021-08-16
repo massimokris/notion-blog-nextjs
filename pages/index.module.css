@@ -1,21 +1,28 @@
 .container {
-  padding: 0 20px;
-  max-width: 700px;
+  padding: 0 18px;
+  max-width: calc(600px + 10%);
   margin: 0 auto;
 }
 
 .logos {
   display: flex;
   align-items: center;
-  padding: 40px 0 20px;
+  justify-content: center;
+  padding: 0 0 20px;
 }
 
-.header {
+.hero {
   margin-bottom: 50px;
 }
 
-.header p {
-  opacity: 0.7;
+.hero h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero p {
+  color: rgb(61, 61, 61);
   line-height: 1.5;
 }
 
@@ -27,7 +34,7 @@
 .heading {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid;
   text-transform: uppercase;
   font-size: 15px;
   opacity: 0.6;
@@ -41,20 +48,22 @@
 }
 
 .post {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0,0,0,.8);
+}
+
+.post:last-child {
+  border-bottom: none;
 }
 
 .postTitle {
   margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-.postTitle a {
-  color: inherit;
+  margin-top: 10px;
+  font-size: 1.6rem;
 }
 
 .postDescription {
   margin-top: 0;
-  margin-bottom: 12px;
-  opacity: 0.65;
+  margin-bottom: 25px;
+  color: rgb(61, 61, 61);
 }
